@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Best Buy</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Best Buy</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/home">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="/aboutus">About Us</a></li>
+                <li><a href="/contactus">Contact Us</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="register-page">
+        <div class="register-form-container">
+            <h2>Login</h2>
+            <form action="/userlogin" method="POST" class="register-form">
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                <button type="submit" id="Login">Login</button>
+                <h4>If you don't have an account ?. <a href="/userRegister">register here</a></h4>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Best Buy. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

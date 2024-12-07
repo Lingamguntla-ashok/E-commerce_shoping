@@ -1,0 +1,95 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url(../images/image.jpg);
+    width: 1400px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Transaction Page */
+.transaction-page {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-page.success {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+.transaction-page.failed {
+    background-color: #ffebee;
+    color: #d32f2f;
+}
+
+.transaction-message h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.transaction-message p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: blue;
+}
+
+.btn.secondary {
+    background-color: #555;
+}
+
+.btn.secondary:hover {
+    background-color:green;
+}
+
+/* Success-Specific */
+.transaction-page.success .btn {
+    background-color: #388e3c;
+}
+
+.transaction-page.success .btn:hover {
+    background-color: #2e7d32;
+}
+
+/* Failed-Specific */
+.transaction-page.failed .btn {
+    background-color: red;
+}
+
+.transaction-page.failed .btn:hover {
+    background-color: green;
+}
+#reg:hover{
+    background-color:orange;
+    color: white;
+}

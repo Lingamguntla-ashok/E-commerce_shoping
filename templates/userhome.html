@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - Best Buy</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/userhome.css')}}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Best Buy</h1>
+                &nbsp;&nbsp;
+                <h1 id="name">Welcome {{ name }}</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/home">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="/aboutus">About Us</a></li>
+                <li><a href="/contactus">Contact Us</a></li>
+                <li><a href="/cartpage?username={{ name }}">Cart</a></li>
+                <li><a href="/home">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="product-page">
+        <h2>Our Products</h2>
+        <div class="product-container">
+
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="{{url_for('static',filename='images/watch1.png')}}" alt="Product 1">
+                <h3>Watch - Tuder [1]</h3>
+                <p>Price: RS 1000.00</p>
+                <form action="/add_to_cart" method="POST">
+                    <label for="quantity1">Quantity:</label>
+                    <input type="number" id="quantity1" name="quantity" min="1" required>
+                    <input type="hidden" name="productname" value="Watch - Tuder [1]">
+                    <input type="hidden" name="username" value="{{ name }}">
+                    <input type="hidden" name="price" value="1000">
+                    <br>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="{{url_for('static',filename='images/jew1.png')}}" alt="Product 3">
+                <h3>Necklace Set</h3>
+                <p>Price: Rs 5000.00</p>
+                <form action="/add_to_cart" method="POST">
+                    <label for="quantity3">Quantity:</label>
+                    <input type="number" id="quantity3" name="quantity" min="1" required>
+                    <input type="hidden" name="productname" value="Necklace Set">
+                    <input type="hidden" name="username" value="{{ name }}">
+                    <input type="hidden" name="price" value="5000">
+                    <br>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product">
+                <img src="{{url_for('static',filename='images/bag1.png')}}" alt="Product 3">
+                <h3>Handbag - Xleio</h3>
+                <p>Price: Rs 1000.00</p>
+                <form action="/add_to_cart" method="POST">
+                    <label for="quantity3">Quantity:</label>
+                    <input type="number" id="quantity3" name="quantity" min="1" required>
+                    <input type="hidden" name="productname" value="Handbag - Xleio">
+                    <input type="hidden" name="username" value="{{ name }}">
+                    <input type="hidden" name="price" value="1000">
+                    <br>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product">
+                <img src="{{url_for('static',filename='images/bag2.png')}}" alt="Product 3">
+                <h3>Handbag - Zooker</h3>
+                <p>Price: Rs 2000.00</p>
+                <form action="/add_to_cart" method="POST">
+                    <label for="quantity3">Quantity:</label>
+                    <input type="number" id="quantity3" name="quantity" min="1" required>
+                    <input type="hidden" name="productname" value="Handbag - Zooker">
+                    <input type="hidden" name="username" value="{{ name }}">
+                    <input type="hidden" name="price" value="2000">
+                    <br>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product">
+                <img src="{{url_for('static',filename='images/bag2.png')}}" alt="Product 3">
+                <h3>Handbag - Zooker</h3>
+                <p>Price: Rs 2000.00</p>
+                <form action="/add_to_cart" method="POST">
+                    <label for="quantity3">Quantity:</label>
+                    <input type="number" id="quantity3" name="quantity" min="1" required>
+                    <input type="hidden" name="productname" value="Handbag - Zooker">
+                    <input type="hidden" name="username" value="{{ name }}">
+                    <input type="hidden" name="price" value="2000">
+                    <br>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="{{url_for('static',filename='images/watch2.png')}}" alt="Product 2">
+                <h3>Watch - Tuder [2]</h3>
+                <p>Price: Rs 1500.00</p>
+                <form action="/add_to_cart" method="POST">
+                    <label for="quantity2">Quantity:</label>
+                    <input type="number" id="quantity2" name="quantity" min="1" required>
+                    <input type="hidden" name="productname" value="Watch - Tuder [2]">
+                    <input type="hidden" name="username" value="{{ name }}">
+                    <input type="hidden" name="price" value="1500">
+                    <br>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="{{url_for('static',filename='images/vegitables.jpg')}}" alt="Product 2">
+                <h3>vegitables</h3>
+                <p>Price: Rs 100.00</p>
+                <form action="/add_to_cart" method="POST">
+                    <label for="quantity2">Quantity:</label>
+                    <input type="number" id="quantity2" name="quantity" min="1" required>
+                    <input type="hidden" name="productname" value="vegitables">
+                    <input type="hidden" name="username" value="{{ name }}">
+                    <input type="hidden" name="price" value="100">
+                    <br>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="{{url_for('static',filename='images/tomatoes.jpg')}}" alt="Product 2">
+                <h3>Tomatoes</h3>
+                <p>Price: Rs 50.00</p>
+                <form action="/add_to_cart" method="POST">
+                    <label for="quantity2">Quantity:</label>
+                    <input type="number" id="quantity2" name="quantity" min="1" required>
+                    <input type="hidden" name="productname" value="Tomatoes">
+                    <input type="hidden" name="username" value="{{ name }}">
+                    <input type="hidden" name="price" value="50">
+                    <br>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="{{url_for('static',filename='images/sonja-langford.jpg')}}" alt="Product 2">
+                <h3>sonja-langford</h3>
+                <p>Price: Rs 200.00</p>
+                <form action="/add_to_cart" method="POST">
+                    <label for="quantity2">Quantity:</label>
+                    <input type="number" id="quantity2" name="quantity" min="1" required>
+                    <input type="hidden" name="productname" value="sonja-langford">
+                    <input type="hidden" name="username" value="{{ name }}">
+                    <input type="hidden" name="price" value="200">
+                    <br>
+                    <br>
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Best Buy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

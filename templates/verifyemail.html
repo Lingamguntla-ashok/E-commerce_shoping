@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification - Best Buy</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/verifyemail.css')}}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Best Buy</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/home">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="/aboutus">About Us</a></li>
+                <li><a href="/contactus">Contact Us</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="email-verify-page">
+        <div class="verify-form-container">
+            <h2>Email Verification</h2>
+            <form action="/verifyemail" method="POST" class="verify-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" value={{name}} required>
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Create a username" value="{{username}}" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" value="{{ email }}" required>
+
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required pattern="[0-9]{10}" title="Enter a valid 10-digit mobile number" value="{{mobile}}">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="password" value={{password}} required>
+
+                <label for="otp">OTP</label>
+                <input type="text" id="otp" name="otp" placeholder="Enter the OTP sent to your email" required  title="Enter a 6-digit OTP">
+
+                <button type="submit" id="verify">Verify Email</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Best Buy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

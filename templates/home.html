@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Welcome Best Buy</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/login">Shop</a></li>
+                <li><a href="/aboutus">About Us</a></li>
+                <li><a href="/contactus">Contact Us</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to the Best Buy</h2>
+            <p>Luxury at your fingertips. Shop the finest collection today!</p>
+            <br>
+            <br>
+            <a href="/login" class="cta-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="products" id="shop">
+        <h2 id="Featured_Product">Featured Products</h2>
+        <div class="product-cards">
+            <div class="card">
+                <img src="{{url_for('static',filename='images/watch1.png')}}" alt="Product 1">
+                <h3>Royal Watch</h3>
+                <p>Rs 1000</p>
+                <a href="/login"><button>Add to Cart</button></a>
+            </div>
+            <div class="card">
+                <img src="{{url_for('static',filename='images/jew1.png')}}" alt="Product 2">
+                <h3>Golden Necklace</h3>
+                <p>Rs 5000</p>
+                <a href="/login"><button>Add to Cart</button></a>
+            </div>
+            <div class="card">
+                <img src="{{url_for('static',filename='images/bag1.png')}}" alt="Product 3">
+                <h3>Luxury Handbag</h3>
+                <p>Rs 1500</p>
+                <a href="/login"><button>Add to Cart</button></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Best Buy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

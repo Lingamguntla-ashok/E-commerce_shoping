@@ -1,0 +1,190 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header Navigation */
+header {
+    background-color: #8B0000;
+    padding: 15px 20px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 1.8em;
+    margin: 0;
+    display: inline-block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFD700; /* Gold hover effect */
+}
+
+/* Email Verification Page */
+.email-verify-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: url(../images/bgimage.jpg);
+    background-size: 1400px 700px;
+}
+
+.verify-form-container {
+    background-color:orange;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.verify-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: red;
+}
+
+.verify-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.verify-form label {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
+
+.verify-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.verify-form input:focus {
+    border-color: #8B0000;
+    outline: none;
+}
+
+.verify-form button {
+    background-color: #8B0000;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.verify-form button:hover {
+    background-color: #6a0000;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #8B0000;
+    color: white;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header .logo h1 {
+        font-size: 1.5em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .verify-form-container {
+        padding: 20px;
+    }
+
+    .verify-form-container h2 {
+        font-size: 1.8em;
+    }
+
+    .verify-form input {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .verify-form button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        align-items: center;
+    }
+
+    .verify-form-container h2 {
+        font-size: 1.6em;
+    }
+
+    .verify-form input {
+        padding: 8px;
+    }
+
+    .verify-form button {
+        padding: 8px;
+    }
+}
+
+#verify:hover{
+    background-color: green;
+    border-radius: 10px;
+}

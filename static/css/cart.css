@@ -1,0 +1,138 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color:pink;
+    padding: 15px 20px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 1.8em;
+    margin: 0;
+    display: inline-block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFD700; /* Gold hover effect */
+    background-color: white;
+    border-radius: 5px;
+    border-color: red;
+}
+
+/* Cart Page */
+.cart-page {
+    padding: 40px 20px;
+    text-align: center;
+    background: orange;
+}
+
+.cart-page h2 {
+    font-size: 2.5em;
+    color: blue;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color:blue;
+    font-style: oblique;
+}
+
+.cart-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.cart-table th {
+    background-color:lightcoral;
+    font-style: italic;
+    color: green;
+    font-weight: bold;
+}
+
+.cart-table tfoot td {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.checkout {
+    margin-top: 20px;
+}
+
+.pay-now {
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pay-now:hover {
+    background-color: blue;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: orange;
+    color: white;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart-table {
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    .pay-now {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}

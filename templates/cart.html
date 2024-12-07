@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/cart.css')}}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Best Buy</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/userhome">Shop</a></li>
+                <li><a href="/aboutus">About Us</a></li>
+                <li><a href="/contactus">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cart-page">
+        <h2>Thank you for choosing our products</h2>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"><strong>Grand Total:</strong></td>
+                    <td><strong>{{ grandtotal }}</strong></td>
+                </tr><br>
+            </tfoot>
+        </table>
+        <div class="checkout">
+            <button class="pay-now" id="rzp-button1">Pay Now</button>
+        </div>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <script>
+            var options = {
+                "key" : "rzp_test_9dNi8k5ylG0oBs",
+                "amount" : "{{ order.amount }}",
+                "currency": "INR",
+                "name" : "Best Buy",
+                "order_id" : "{{ order.id }}",
+                "Description" : "Basic E commerce",
+                "handler" : function (response){
+                    var form = document.createElement('form');
+                    form.method = "POST";
+                    form.action = "/sucess";
+                    form.innerHTML = `
+                        <input type="hidden" name="razorpay_payment_id" value="${response.razorpay_payment_id}">
+                        <input type="hidden" name="razorpay_order_id" value="${response.razorpay_order_id}">
+                        <input type="hidden" name="razorpay_signature" value="${response.razorpay_signature}">
+                    `;
+                    document.body.appendChild(form);
+                    form.submit();
+                },
+                "prefil" : {
+                    "name" : "Royal Shop",
+                    "email" : "lingamguntlaashok2@gmail.com",
+                    "contact" : "+91 8897446212"
+                },
+                "theme" : {
+                    "color" : "red"
+                }
+            };
+            var rzp1 = new Razorpay(options)
+            document.getElementById('rzp-button1').onclick = function(e){
+                rzp1.open();
+                e.preventDefault();
+            }
+        </script>
+    </section>
+    <footer>
+        <p>&copy; 2024 Best Buy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

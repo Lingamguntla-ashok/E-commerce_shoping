@@ -1,0 +1,169 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    color: #8B0000; /* Royal Red */
+}
+
+button {
+    background-color: #8B0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #6a0000;
+}
+
+/* Header */
+header {
+    background-color: #9bf60a;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 2em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: blue;
+    background-color: yellow;
+    border-radius: 5px;
+    border-color: green;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+    background-color: orange;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: blue;
+}
+
+.about-us p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Contact Us Section */
+.contact-us {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.contact-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-us p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+    background-color: #08d6fb;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+
+    .about-us p {
+        font-size: 1.1em;
+    }
+
+    .contact-us p {
+        font-size: 1.1em;
+    }
+}
